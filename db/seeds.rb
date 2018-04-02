@@ -27,7 +27,8 @@ end
 customers = Customer.all
 
 customers.each do |cust|
-  cust.addresses.create(
+  Address.create(
+    customer_id: cust.id,
     city: Faker::Address.city,
     street: Faker::Address.street_address,
     zip_code: Faker::Address.zip_code
