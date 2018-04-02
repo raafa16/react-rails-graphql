@@ -47,6 +47,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'faker', '~> 1.6', '>= 1.6.6'
   gem 'graphiql-rails'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
