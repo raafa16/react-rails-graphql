@@ -7,20 +7,24 @@ import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 
 const Hello = props => (
-  <div>Hello {props.name}!</div>
-)
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container center">
+      <h1 class="display-4">Hello {props.name}!</h1>
+    </div>
+  </div>
+);
 
 Hello.defaultProps = {
   name: 'David'
-}
+};
 
 Hello.propTypes = {
   name: PropTypes.string
-}
+};
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <Hello name="React" />,
     document.body.appendChild(document.createElement('div')),
   )
-})
+});
