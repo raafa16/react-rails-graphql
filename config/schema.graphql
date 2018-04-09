@@ -1,0 +1,54 @@
+# An address of a customer
+type Address {
+  # City
+  city: String!
+
+  # ID of the address
+  id: ID!
+
+  # Street
+  street: String!
+
+  # Zip Code
+  zip_code: String!
+}
+
+# A company
+type Company {
+  customers: [Customer]!
+
+  # ID of the Company
+  id: ID
+
+  # Name of the Company
+  name: String
+}
+
+# A customer of a company
+type Customer {
+  address: Address!
+
+  # The customer's company ID
+  company_id: ID!
+
+  # Email of the customer
+  email: String!
+
+  # ID of the customer
+  id: ID!
+
+  # Name of the customer
+  name: String!
+}
+
+type Mutation {
+
+}
+
+type Query {
+  # List all the companies
+  companies: [Company]
+
+  # Find a company
+  company(id: ID!): Company
+}

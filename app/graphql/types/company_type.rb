@@ -1,4 +1,4 @@
-CompanyType = GraphQL::ObjectType.define do
+Types::CompanyType = GraphQL::ObjectType.define do
   name 'Company'
   description 'A company'
 
@@ -6,5 +6,5 @@ CompanyType = GraphQL::ObjectType.define do
 
   field :id, types.ID, 'ID of the Company'
   field :name, types.String, 'Name of the Company'
-  field :customers, types[CustomerType]
+  field :customers, !types[Types::CustomerType]
 end
