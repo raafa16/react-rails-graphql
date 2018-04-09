@@ -43,7 +43,8 @@ type Customer {
 }
 
 type Mutation {
-
+  # An example field added by the generator
+  testField: String
 }
 
 type Query {

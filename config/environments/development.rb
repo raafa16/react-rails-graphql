@@ -54,4 +54,8 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  # In development, keep yarn running in the background to watch for changes
+  # to the GraphQL queries in React components.
+  spawn('yarn run relay --watch >> log/yarn.log 2>&1')
 end
