@@ -26,10 +26,11 @@ type Company {
 
 # A customer of a company
 type Customer {
+  # The customer's address
   address: Address!
 
   # The customer's company ID
-  company_id: ID!
+  company: Company!
 
   # Email of the customer
   email: String!
