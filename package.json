@@ -2,9 +2,20 @@
   "name": "react-rails-graphql",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "^3.4.1"
+    "@rails/webpacker": "^3.4.1",
+    "babel-preset-react": "^6.24.1",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-relay": "^1.5.0",
+    "relay-runtime": "^1.5.0"
   },
   "devDependencies": {
+    "babel-plugin-relay": "^1.5.0",
+    "relay-compiler": "^1.5.0",
     "webpack-dev-server": "2.11.2"
+  },
+  "scripts": {
+    "relay": "relay-compiler --src ./app/javascript/packs --schema ./config/schema.graphql --extensions js jsx"
   }
 }
